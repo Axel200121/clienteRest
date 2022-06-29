@@ -36,10 +36,11 @@
             <template v-slot:default>
               <thead>
                 <tr class="cyan darken-3">
-                  <th class="white--text">No.</th>
-                  <th class="white--text">NOMBRE</th>
-                  <th class="white--text">USUARIO</th>
-                  <th class="white--text">CONSTRASEÑA</th>
+                  <th class="white--text text-center">NO.</th>
+                  <th class="white--text text-center">NOMBRE</th>
+                  <th class="white--text text-center">USUARIO</th>
+                  <th class="white--text text-center">CONSTRASEÑA</th>
+                  <th class="white--text text-center">FECHA DE REGISTRO</th>
                   <th class="white--text text-center">ACCIONES</th>
                 </tr>
               </thead>
@@ -50,6 +51,7 @@
                   <td class=" font-weight-bold text-center">{{ usuario.nombre}}</td>
                   <td class=" font-weight-bold text-center">{{ usuario.nickname }}</td>
                   <td class=" font-weight-bold text-center">{{ usuario.password }}</td>
+                  <td class=" font-weight-bold text-center">{{ usuario.created_at }}</td>
                   <td class=" text-center">
                     <v-btn dark class="amber darken-3" small @click="formEditar(usuario.id, usuario.nombre, usuario.nickname, usuario.password)">
                       <v-icon>mdi-pencil</v-icon>Editar
@@ -66,7 +68,7 @@
 
         <v-dialog v-model="dialog" max-width="500">
           <v-card>
-            <v-card-title class="cyan darken-3 white--text">Formulario de los usuarios</v-card-title>
+            <v-card-title class="cyan darken-3 white--text">FORMULARIO DE LOS USUARIOS</v-card-title>
             <v-card-text>
               <v-form>
                 <v-container>
